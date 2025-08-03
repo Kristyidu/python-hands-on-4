@@ -25,3 +25,36 @@ At checkout:
 # print(godiya == daniella) # should return true
 # print(summary_of_cart)
 # print(cart)
+
+cart = {}
+cart["watch"] = 1
+godiya = cart
+print("Godiya added a watch:", godiya)
+
+cart["shoes"] = 2
+print(cart)
+daniella = cart
+print("Daniella added a shoe:", daniella)
+
+print(id(cart))
+print(id(godiya))
+print(id(daniella))
+
+print(godiya == daniella)
+
+daniella.pop("shoes")
+print("Daniella removed shoes:", daniella)
+
+godiya.update({"bag": 1})
+print("Godiya added a bag:", godiya)
+
+godiya.pop("bag")
+print("Godiya removed the bag:", godiya)
+
+summary = cart.copy()
+print("Snapshot of checkout:", summary)
+
+cart.clear()
+print("Emptied cart for next customer", cart)
+
+
